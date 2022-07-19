@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/githubJuniorUp/static/css/main.af2c6b84.css",
+    "main.js": "/githubJuniorUp/static/js/main.44051bd8.js",
+    "index.html": "/githubJuniorUp/index.html",
+    "main.af2c6b84.css.map": "/githubJuniorUp/static/css/main.af2c6b84.css.map",
+    "main.44051bd8.js.map": "/githubJuniorUp/static/js/main.44051bd8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af2c6b84.css",
+    "static/js/main.44051bd8.js"
+  ]
+}
