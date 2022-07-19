@@ -2,6 +2,7 @@ import React, {ChangeEvent, useEffect, useState} from 'react';
 import './../index.css'
 import {useLazyGetUserReposQuery, useSearchUsersQuery} from "../store/github/github.api";
 import {useDebounce} from "../hooks/debounce";
+import RepoCard from "../components/RepoCard";
 
 const HomePage = () => {
 
@@ -22,7 +23,7 @@ const HomePage = () => {
     }, [debounce,data])
     const clickHandler = (username:string) => {
         fetchRepos(username)
-        console.log(data)
+        setDropdwon(false)
     }
     return (
         <div className={'flex justify-center pt-10 mx-auto h-screen w-screen'}>
@@ -48,9 +49,7 @@ const HomePage = () => {
                 <div>
                     {areReposLoading && <p className={'text-center'}>Repos are loading...</p>}
 
-                    {repos?.map(
-                        //@ts-ignore
-                        repo=><p>{repo.url}</p>)}
+                    {repos?.map(repo=><RepoCard repo={repo} key={repo.id}/>)}
                 </div>
 
             </div>
